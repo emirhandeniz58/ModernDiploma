@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <style>
+      .filter-green {
+        filter: invert(37%) sepia(86%) saturate(383%) hue-rotate(100deg)
+          brightness(96%) contrast(94%);
+      }
+      body {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <fieldset>
+        <legend>Arama Tercihleri</legend>
+        <form action="">
+          <div id="div1" class="row mt-2">
+            <div class="col d-flex align-items-center">
+              <label for="number">Numara:</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="number"
+                name="number"
+                placeholder="okul numaranız"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+            <div class="col d-flex align-items-center">
+              <label for="faculty">Fakülte:</label>
+            </div>
+            <div class="col">
+              <select
+                name="faculty"
+                id="faculty"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option value="f1">Denizcilik Fakültesi</option>
+                <option value="f2">Diş Hekimliği Fakültesi</option>
+                <option value="f3">Eğitim Fakültesi</option>
+                <option value="f4">Fen Edebiyat Fakültesi</option>
+                <option value="f5">Güzel Sanatlar Fakültesi</option>
+                <option value="f6">
+                  Havacılık ve Uzay Bilimleri Fakültesi
+                </option>
+                <option value="f7">Hukuk Fakültesi</option>
+                <option value="f8">İktisadi ve İdari Bilimler Fakültesi</option>
+                <option value="f9">İlahiyat Fakültesi</option>
+                <option value="f10">İletişim Fakültesi</option>
+                <option value="f11">Mimarlık Fakültesi</option>
+                <option value="f12">Mühendislik Fakültesi</option>
+                <option value="f13">Sağlık Bilimleri Fakültesi</option>
+                <option value="f14">Spor Bilimleri Fakültesi</option>
+                <option value="f15">Teknoloji Fakültesi</option>
+                <option value="f16">Tıp Fakültesi</option>
+                <option value="f17">Turizm Fakültesi</option>
+                <option value="f18">Ziraat Fakültesi</option>
+              </select>
+            </div>
+          </div>
+          <div id="div1" class="row row-cols-4 mt-2">
+            <div class="col d-flex align-items-center">
+              <label for="case">Durum:</label>
+            </div>
+            <div class="col">
+              <select
+                name="case"
+                id="case"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option value="graduate">Mezun</option>
+                <option value="student">Ögrenci</option>
+              </select>
+            </div>
+
+            <div class="col d-flex align-items-center">
+              <label for="identification">TC Kimlik No:</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="identification"
+                name="identification"
+                placeholder="TC Kimlik Numara"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+          </div>
+          <div id="div2" class="row row-cols-4 mt-2">
+            <div class="col d-flex align-items-center">
+              <label for="Fname">Ad:</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="Fname"
+                name="Fname"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+
+            <div class="col d-flex align-items-center">
+              <label for="department">Bölüm:</label>
+            </div>
+            <div class="col">
+              <select
+                name="department"
+                id="department"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option value="d1">Antrenörlük Eğitimi</option>
+                <option value="d2">Antrenörlük Eğitimi (İÖ)</option>
+                <option value="d3">Arkeoloji</option>
+                <option value="d4">Bahçe Bitkileri</option>
+                <option value="d5">Beden Eğitimi ve Spor Öğretmenliği</option>
+                <option value="d6">Bilgisayar Mühendisliği</option>
+                <option value="d7">Bilgisayar Mühendisliği(İÖ)</option>
+                <option value="d8">Bilişim Sistemleri Mühendisliği</option>
+                <option value="d9">
+                  Bilişim Sistemleri Mühendisliği (KKTC Uyruklu)
+                </option>
+                <option value="d10">
+                  Bilişim Sistemleri Mühendisliği (M.T.O.K.)
+                </option>
+                <option value="d11">Bitki Koruma</option>
+                <option value="d12">Biyoloji</option>
+                <option value="d13">Biyomedikal Mühendisliği (M.T.O.K.)</option>
+                <option value="d14">
+                  Çalışma Ekonomisi ve Endüstri İlişkileri
+                </option>
+                <option value="d15">
+                  Çalışma Ekonomisi ve Endüstri İlişkileri (İÖ)
+                </option>
+                <option value="d16">Çevre Mühendisliği</option>
+                <option value="d17">Denizcilik İşletmeleri Yönetimi</option>
+                <option value="d18">Diş Hekimliği</option>
+                <option value="d19">Ebelik</option>
+                <option value="d20">Elektrik Mühendisliği</option>
+                <option value="d21">Elektrik Mühendisliği (İÖ)</option>
+                <option value="d22">
+                  Elektrik Mühendisliği (KKTC Uyruklu)
+                </option>
+                <option value="d23">
+                  Elektronik ve Haberleşme Mühendisliği
+                </option>
+                <option value="d24">
+                  Elektronik ve Haberleşme Mühendisliği (İÖ)
+                </option>
+                <option value="d25">Endüstri Mühendisliği</option>
+                <option value="d26">Enerji Sistemleri Mühendisliği</option>
+                <option value="d27">Felsefe</option>
+                <option value="d28">Fen Bilgisi Öğretmenliği</option>
+                <option value="d29">Fizik</option>
+                <option value="d30">Gastronomi ve Mutfak Sanatları</option>
+                <option value="d31">Gazetecilik</option>
+                <option value="d32">Gazetecilik (İÖ)</option>
+                <option value="d33">Görsel İletişim Tasarımı</option>
+                <option value="d34">Halkla İlişkiler ve Tanıtım</option>
+                <option value="d35">Harita Mühendisliği</option>
+                <option value="d36">Havacılık Elektrik ve Elektroniği</option>
+                <option value="d37">Havacılık Yönetimi</option>
+                <option value="d38">Hemşirelik</option>
+                <option value="d39">Hukuk</option>
+                <option value="d40">İç Mimarlık</option>
+                <option value="d41">İktisat</option>
+                <option value="d42">İktisat (İÖ)</option>
+                <option value="d43">İlahiyat</option>
+                <option value="d44">İlahiyat (M.T.O.K.)</option>
+                <option value="d45">İlköğretim Matematik Öğretmenliği</option>
+                <option value="d46">İngiliz Dili ve Edebiyatı</option>
+                <option value="d47">İngilizce Öğretmenliği</option>
+                <option value="d48">İnşaat Mühendisliği</option>
+                <option value="d49">İşletme</option>
+                <option value="d50">İşletme (İÖ)</option>
+                <option value="d51">Jeofizik Mühendisliği</option>
+                <option value="d52">Kimya</option>
+                <option value="d53">Kimya Mühendisliği</option>
+                <option value="d54">Makine Mühendisliği</option>
+                <option value="d55">Matematik</option>
+                <option value="d56">Mekatronik Mühendisliği</option>
+                <option value="d57">Metalurji ve Malzeme Mühendisliği</option>
+                <option value="d58">Mimarlık</option>
+                <option value="d59">Okul Öncesi Öğretmenliği</option>
+                <option value="d60">Otomotiv Mühendisliği</option>
+                <option value="d61">Otomotiv Mühendisliği (M.T.O.K.)</option>
+                <option value="d62">Radyo, Televizyon ve Sinema</option>
+                <option value="d63">Rehberlik ve Psikolojik Danışmanlık</option>
+                <option value="d64">Reklamcılık</option>
+                <option value="d65">Rekreasyon</option>
+                <option value="d66">Rekreasyon (İÖ)</option>
+                <option value="d67">Sınıf Öğretmenliği</option>
+                <option value="d68">Siyaset Bilimi ve Kamu Yönetimi</option>
+                <option value="d69">
+                  Siyaset Bilimi ve Kamu Yönetimi (İÖ)
+                </option>
+                <option value="d70">Sosyal Hizmet</option>
+                <option value="d71">Sosyal Hizmet (KKTC Uyruklu)</option>
+                <option value="d72">Spor Yöneticiliği</option>
+                <option value="d73">Spor Yöneticiliği (İÖ)</option>
+                <option value="d74">Tarih</option>
+                <option value="d75">Tıp</option>
+                <option value="d76">Turizm İşletmeciliği</option>
+                <option value="d77">Türk Dili ve Edebiyatı</option>
+                <option value="d78">Türk Dili ve Edebiyatı (İÖ)</option>
+                <option value="d79">Türkçe Öğretmenliği</option>
+                <option value="d80">Uçak Gövde ve Motor Bakımı</option>
+                <option value="d81">Uluslararası İlişkiler</option>
+                <option value="d82">Uluslararası İlişkiler (İÖ)</option>
+                <option value="d83">Yazılım Mühendisliği</option>
+              </select>
+            </div>
+          </div>
+          <div id="div2" class="row mt-2">
+            <div class="col d-flex align-items-center">
+              <label for="bdate">Mezuniyet Dönemi:</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="bdate"
+                name="bdate"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+
+            <div class="col d-flex align-items-center">
+              <label for="Sname">Soyadı:</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="Sname"
+                name="Sname"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+          </div>
+          <div id="div3" class="row row-cols-4 mt-2">
+            <div class="col d-flex align-items-center">
+              <label for="Dno">Diploma NO:</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="Dno"
+                name="Dno"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+
+            <div class="col d-flex align-items-center">
+              <label for="date">Mezuniyet Tarihi:</label>
+            </div>
+            <div class="col">
+              <input
+                type="date"
+                name="date"
+                min="1976-01-01"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+          </div>
+        </form>
+      </fieldset>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+        <button class="btn btn-primary me-md-2" type="button">Ara</button>
+      </div>
+
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="col">SN</th>
+              <th class="col" style="width: 90px">ÖĞRENCİ NO</th>
+              <th class="col">ADI</th>
+              <th class="col">SOYADI</th>
+              <th class="col">T.C. NO</th>
+              <th class="col">BABA ADI</th>
+              <th class="col">ANNE ADI</th>
+              <th class="col">DOGUM YERİ</th>
+              <th class="col">DOGUM TARİHİ</th>
+              <th class="col">DURUM/TAR</th>
+              <th class="col">M.DON</th>
+              <th class="col">ORT</th>
+              <th class="col">İLİŞİK KESME DURUMU</th>
+              <th class="col">ORT.</th>
+              <th class="col">DİP. NO</th>
+              <th class="col">DİP. T.</th>
+              <th class="col">VER</th>
+              <th class="col">DÜZ</th>
+              <th class="col">DİP</th>
+              <th class="col">D. EKİ</th>
+              <th class="col">İKİNCİ MÜSHA</th>
+              <th class="col">ÖNLİSANS MEZUNU</th>
+              <th class="col">HAZIR</th>
+              <th class="col">TESLİM EDİLDİ</th>
+              <th class="col">İKİNCİ MÜSHA HAZIR</th>
+              <th class="col">ADRES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text-center align-middle">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="relation"
+                />
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="p-0 align-middle">
+                <a href="" class="d-flex justify-content-center w-100"
+                  ><img
+                    class="filter-green"
+                    src="asset/diploma-svgrepo-com.svg"
+                    width="24"
+                    height="24"
+                /></a>
+              </td>
+              <td class="p-0 align-middle">
+                <a href="" class="d-flex justify-content-center w-100"
+                  ><img
+                    class="filter-green"
+                    src="asset/diploma-svgrepo-com (1).svg"
+                    width="24"
+                    height="24"
+                /></a>
+              </td>
+              <td>
+                <a href=""
+                  ><i
+                    class="bi bi-book text-success"
+                    style="font-size: 24px"
+                  ></i
+                ></a>
+              </td>
+              <td class="text-center align-middle">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="first-output"
+                />
+              </td>
+              <td></td>
+              <td class="text-center align-middle">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="ready"
+                />
+              </td>
+              <td class="text-center align-middle">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="deliver"
+                />
+              </td>
+              <td class="text-center align-middle">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="second-output"
+                />
+              </td>
+              <td class="text-center">
+                <i
+                  class="bi bi-house-door text-success"
+                  style="font-size: 24px"
+                ></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <button type="button" class="btn text-success btn-lg mt-2">
+          Diploma Numarasına Göre Excel Liste
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn text-success btn-lg mt-2">
+          Mezuniyet Ortalamasına Göre Excel Liste
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn text-success btn-lg mt-2">
+          T.C. Kimlik Numarasına Göre Excel Liste
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn text-success btn-lg mt-2">
+          Sadeleştirilmiş Excel Liste (Eski Manuel Formatı)
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn text-success btn-lg mt-2">
+          Programa Göre Excel Liste
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
